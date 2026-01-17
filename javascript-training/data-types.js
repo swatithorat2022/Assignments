@@ -64,3 +64,4 @@ console.log("Price of Mango is : "+fruitsAndPrices[5]);
 console.log("Avaialablity of orange is: "+fruitsPricesAndAvailability[11]);
 
 
+console.log
