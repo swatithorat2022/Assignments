@@ -41,7 +41,6 @@ function findMaximumNumPositionOfGivenNumbers(num:number[],position:number):numb
 
     let max:number=num[position]??0;
     let pos:number=0;
-    let i:number=-1;
     for(let i:number=position;i<num.length;i++)
     {
 
