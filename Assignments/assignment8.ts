@@ -1,24 +1,33 @@
-function power(x:number,n:number):number{
-    let result:number=0;
-    if(n==0)
-    {
-     result=1
+let n:number =5;
+
+for(let i=1;i<=n;i++){
+    let print:string="";
+  for(let j=n;j>i;j--){
+    
+     print+=" ";     
+
     }
-    else if(n<0)
+    for(let j:number=1;j<=i;j++)
     {
-        let m : number=-1*n;
-        result=(1/(x*m));
-       
+        print+=j+" ";
     }
-    else 
-    {
-        result=x*n;
-        
-    }
-    console.log(`${n} power of number ${x} is ${result}`);
-    return result;
+
+    console.log(print);
 }
 
-console.log(power(2,2));
-console.log(power(2,-2));
-console.log(power(2,0));
+for(let i=n-1;i>0;i--){
+    let print:string="";
+  for(let j=n;j>i;j--){
+    
+     print+=" ";     
+
+    }
+    for(let j:number=1;j<=i;j++)
+    {
+        print+=j+" ";
+    }
+
+    console.log(print);
+}
+
+
