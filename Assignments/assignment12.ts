@@ -1,20 +1,23 @@
 function findDuplicateOccurances(str:string):void{
-    let actualString:string[]=str.split(' ');
-    let map:Map<string,number>=new Map<string,number>();
     let count:number=0;
-    let indexes:number[]=[];
-    for(let i:number=0;i<actualString.length;i++)
-    {
-        if(map.has(actualString[i]!))
-        {
-            map.set(actualString[i]!,count+1);
-            indexes.push(i);
-            console.log(actualString[i]+"occurs at :"+i)
-        }
-        else{
-            map.set(actualString[i]!,1)
-        }
-    }
+   const actualString: string[] = str.split(' ');
+  const map: Map<string, number> = new Map<string, number>();
+  
+  for (const word of actualString) {
+    // Shorter, safe logic using nullish coalescing
+    map.set(word, (map.get(word) ?? 0) + 1);
+  }
+  
+  // Example logic for finding duplicates
+  map.forEach((count, word) => {
+    if (count > 1){
+        if(word=="Java" || word=="java"){
+         console.log(`${word}: ${count}`);
 
-    console.log("Total occurances of ")
+        }
+    } 
+  });
 }
+let str:string ="Java is a popular programming language. Java is used for web development, mobile applications, and more.";
+findDuplicateOccurances(str);
+export{};
