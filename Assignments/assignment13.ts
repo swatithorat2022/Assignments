@@ -15,5 +15,6 @@ function displayTriangle(rows:number):void{
     }
 
     }
+
+displayTriangle(6);
 export{};
-displayTriangle(5);
